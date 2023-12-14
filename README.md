@@ -17,5 +17,5 @@ Kompilera koden själv behöver du installera rust. Detta kan enkelt göras här
 
 När det är installerat borde det bara vara att köra `> crago run` i denna mapp. Den kommer då ladda ner dependencies och kompilera (kan ta lite tid första gången går fortare andra gången) och starta programmet. Efter det kan du använda programmet precis som när du startar `.exe`-filen ovan, genom att besöka [http://127.0.0.1:5800/app](http://127.0.0.1:5800/app).
 
-## Om Systemet
+## Om systemet
 Systemet använder [Salvo](https://salvo.rs/) som server och OpenAPI sppec-genererare samt en embeded [SurrealDB](https://surrealdb.com/) in-memory databas för att lagra användare och stugor. På frontend-sidan så används [Handlebars](https://handlebarsjs.com/) som ett enkelt templateingverktyg för att generera GUI. Då 4h är ganska kort tid behövde några genvägar tas, därav att koden ser lite lustig ut på vissa platser, jag ber om ursäkt för det, men jag tror den funkar ganska bra ändå. 
