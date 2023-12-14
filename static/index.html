@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stugbokning</title>
+</head>
+<body>
+    <h1>Välkommen till stugbokningssystemet</h1>
+
+    <h2>Boka en stuga</h2>
+    <div id="cabins"></div>
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script>
+
+      (async () => {
+        // compile the template
+        var template = Handlebars.compile(`
+          {{#each cabins}}
+            <p>
+              {{name}},
+              {{#if booked}}
+                Bokad av {{booked}}
+              {{else}}
+                <button onclick="book('{{name}}')">Boka här</button>
+              {{/if}}
+            </p>
+          {{/each}}
+        `);
+
+        const response = await fetch('/app/cabins');
+        const cabins = await response.json();
+        console.log(cabins);
+
+        document.getElementById("cabins").innerHTML = template({ cabins: cabins});
+      })()
+
+      function book(cabin) {
+        fetch("/app/book/" + cabin).then(() => alert("Du har bokat: " + cabin)).finally(() => location.reload());
+      }
+    
+    </script>
+</body>
+</html>
