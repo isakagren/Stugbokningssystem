@@ -10,7 +10,7 @@ Det finns 4 användare:
  - user2
 
 Alla har samma lösenord: `pwd`. 
-När du startat appen besöker du [http://127.0.0.1:5800/](http://127.0.0.1:5800/). Där kan du antingen gå vidare till appen eller kolla på OpenAPI specen för applikationen. Om du går vidare till appen, dvs följer länken till [http://127.0.0.1:5800/app](http://127.0.0.1:5800/app) så kommer du behöva logga in med något av kontona ovan. Adminkontot är administratör och kan se alla stugor. De andra användarna kan se lediga stugor och sina egna stugor. 
+När du startat appen besöker du [http://127.0.0.1:5800/](http://127.0.0.1:5800/). Där kan du antingen gå vidare till appen eller kolla på OpenAPI specen för applikationen. Om du går vidare till appen, dvs följer länken till [http://127.0.0.1:5800/app](http://127.0.0.1:5800/app) så kommer du behöva logga in med något av kontona ovan. Adminkontot är administratör och kan se alla stugor. De andra användarna kan se lediga stugor och sina egna stugor. För att testa flera olika användare samtidigt kan du använda inkognitofönster eller liknande. 
 
 ## Kör koden
 Kompilera koden själv behöver du installera rust. Detta kan enkelt göras härifrån: [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install).
